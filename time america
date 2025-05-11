@@ -1,0 +1,7 @@
+from zoneinfo import ZoneInfo
+
+try:
+    tz = ZoneInfo("America/Panama")
+    print(f"Zona horaria válida: {tz}")
+except Exception as e:
+    print(f"Error: {e}")
