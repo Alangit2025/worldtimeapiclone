@@ -8,6 +8,10 @@ app = FastAPI()
 def root():
     return {"mensaje": "API funcionando correctamente"}
 
+@app.head("/")
+def head_root():
+    return {"mensaje": "HEAD request handled correctly"}
+
 @app.get("/api/time/{timezone}")
 def get_time(timezone: str):
     try:
